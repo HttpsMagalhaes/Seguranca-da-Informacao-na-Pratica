@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f7f6; padding: 20px; display: flex; justify-content: center; margin-top: 50px; }
+        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 100%; max-width: 350px; text-align: center; }
+        h2 { color: #002B33; }
+        input { width: 90%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { background-color: #00AE9D; color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; font-weight: bold; font-size: 16px; cursor: pointer; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="card" id="formulario">
+        <h2>🎁 Sorteio dos brindes - Sicoob </h2>
+        <p style="color: #666; font-size: 14px;">Preencha seus dados para validar o certificado e concorrer aos brindes.</p>
+        <input type="text" placeholder="Nome Completo">
+        <input type="number" placeholder="CPF (Apenas números)">
+        <button onclick="darSusto()">Enviar e Participar</button>
+    </div>
+
+    <script>
+        function darSusto() {
+            document.getElementById('formulario').innerHTML = `
+                <h1 style="color: red; font-size: 24px;">🚨 VOCÊ ENVIOU SEUS DADOS SEM CONFERIR O LINK? 🚨</h1>
+                <p style="font-weight: bold; margin-top: 20px;">Seus dados poderiam estar na mão de um hacker agora.</p>
+                <p style="font-size: 14px; margin-top: 20px;">Bem-vindos à oficina de Segurança, espero que saiam daqui mais conscientes!</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
